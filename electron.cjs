@@ -10,6 +10,7 @@ function createWindow() {
     height: 900,
     minWidth: 1100,
     minHeight: 700,
+    title: 'MONALIX',
 
     icon: path.join(__dirname, 'public', 'monalix.ico'),
 
