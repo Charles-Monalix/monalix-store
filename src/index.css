@@ -1,0 +1,255 @@
+/* =========================================================
+   RESET GLOBAL MONALIX
+========================================================= */
+
+html {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  /* Autoriser le scrolling vertical */
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background: #f4f6fa;
+  color: #172033;
+
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+
+  max-width: none;
+
+  text-align: left;
+
+  /* IMPORTANT : ne pas bloquer le scrolling */
+  overflow: visible;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+/* =========================================================
+   PAGE ARTICLES & PRODUITS — MONALIX
+========================================================= */
+
+.products-page {
+  width: 100%;
+  padding: 30px 36px 50px;
+}
+
+/* En-tête */
+.products-page-header {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.products-page-header > div:first-child {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.products-page-header h2 {
+  margin: 6px 0 8px;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #172033;
+}
+
+.products-page-header p {
+  margin: 0;
+  color: #667085;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.products-page-header .products-count {
+  min-width: 120px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #172033;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   GRILLE DES PRODUITS
+========================================================= */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+/* =========================================================
+   CARTE PRODUIT
+========================================================= */
+
+.product-card {
+  min-width: 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(23, 32, 51, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  border-color: #d5a928;
+  box-shadow: 0 8px 22px rgba(23, 32, 51, 0.10);
+}
+
+/* Partie supérieure */
+.product-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.product-icon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  background: #f5f7fa;
+  border: 1px solid #e4e8ef;
+
+  font-size: 22px;
+}
+
+.product-category {
+  color: #667085;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Nom */
+.product-card h3 {
+  margin: 0 0 10px;
+
+  color: #172033;
+  font-size: 18px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+/* Code */
+.product-code {
+  margin-bottom: 18px;
+
+  color: #7a8496;
+  font-size: 13px;
+}
+
+/* Bas de carte */
+.product-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding-top: 15px;
+  border-top: 1px solid #edf0f4;
+}
+
+/* Prix */
+.product-card-bottom > div:first-child {
+  color: #172033;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* Stock */
+.product-card-bottom > div:last-child {
+  color: #667085;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .products-page {
+    padding: 22px 18px 40px;
+  }
+
+  .products-page-header > div:first-child {
+    flex-direction: column;
+  }
+
+  .products-page-header h2 {
+    font-size: 25px;
+  }
+
+  .products-count {
+    width: 100%;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    padding: 17px;
+  }
+}
