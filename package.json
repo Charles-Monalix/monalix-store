@@ -1,7 +1,7 @@
 {
   "name": "monalix-store",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MONALIX - Logiciel de gestion commerciale",
   "type": "module",
   "main": "electron.cjs",
